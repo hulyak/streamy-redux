@@ -1,4 +1,5 @@
 import streams from '../apis/streams';
+import history from '../history';
 import {
   SIGN_IN,
   SIGN_OUT,
@@ -29,6 +30,8 @@ export const createStream = (formValues) => async (dispatch, getState) => {
   const response = await streams.post('/streams', { ...formValues, userId });
 
   dispatch({ type: CREATE_STREAM, payload: response.data });
+  // programmatic navigation
+  history.push('/');
 };
 
 // list all records
@@ -39,12 +42,12 @@ export const fetchStreams = () => async (dispatch) => {
 
 // get one particular stream
 export const fetchStream = (id) => async (dispatch) => {
-  const response = await streams.get(`/stream/${id}`);
+  const response = await streams.get(`/streams/${id}`);
   dispatch({ type: FETCH_STREAM, payload: response.data });
 };
 
 // create record, args : id and the update we need to make
-export const edit = (id, formValues) => async (dispatch) => {
+export const editStream = (id, formValues) => async (dispatch) => {
   const response = await streams.put(`/streams/${id}`, formValues);
   dispatch({ type: EDIT_STREAM, payload: response.data });
 };
