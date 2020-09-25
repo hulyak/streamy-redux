@@ -41,7 +41,7 @@ export const fetchStream = (id) => async (dispatch) => {
   dispatch({ type: FETCH_STREAM, payload: response.data });
 };
 
-// create record
+// create record, args : id and the update we need to make
 export const edit = (id, formValues) => async (dispatch) => {
   const response = await streams.put(`/streams/${id}`, formValues);
   dispatch({ type: EDIT_STREAM, payload: response.data });
