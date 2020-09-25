@@ -33,6 +33,7 @@ class StreamEdit extends React.Component {
     );
   }
 }
+
 const mapStateToProps = (state, ownProps) => {
   // console.log(ownProps); state is undefined when the app loads
   return { stream: state.streams[ownProps.match.params.id] };
