@@ -15,6 +15,7 @@
 ## Requiremnets: 
 
 - Node should be installed.
+- [OBS- Open Broadcaster Software](https://obsproject.com/) should be installed on your local machine to be able to make video streams.
 
 ## How To Run :
 
