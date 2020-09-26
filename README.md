@@ -12,7 +12,7 @@
 - React-Portal shows Delete Stream Modal 
 - Node Media Server creates a RTMP and OBS video player
 
-## Requiremnets: 
+## Requirements: 
 
 - Node should be installed.
 - [OBS- Open Broadcaster Software](https://obsproject.com/) should be installed on your local machine to be able to make video streams.
